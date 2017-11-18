@@ -33,42 +33,10 @@
     .container
       %h1.my-4.text-center.text-lg-left Thumbnail Gallery
       .row.text-center.text-lg-left
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
-        .col-lg-3.col-md-4.col-xs-6
-          %a.d-block.mb-4.h-100{:href => "#"}
-            %img.img-fluid.img-thumbnail{:alt => "", :src => "http://placehold.it/400x300"}/
+        - @products.each do |product|
+          .col-lg-3.col-md-4.col-xs-6
+            %a.d-block.mb-4.h-100{:href => "#"}
+              %img.img-fluid.img-thumbnail{:alt => "", :src => product.image_name}/
     / /.container
     / Footer
     %footer.py-5.bg-dark
