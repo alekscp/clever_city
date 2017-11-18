@@ -36,12 +36,12 @@
         - @products.each do |product|
           .col-lg-3.col-md-4.col-xs-6
             %a.d-block.mb-4.h-100{:href => "#"}
-              %img.img-fluid.img-thumbnail{:alt => "", :src => product.image_name}/
+              %img.img-fluid.img-thumbnail{:alt => "", :src => image_url(product.image_name)}/
     / /.container
     / Footer
     %footer.py-5.bg-dark
       .container
-        %p.m-0.text-center.text-white Copyright © Your Website 2017
+        %p.m-0.text-center.text-white Copyright © Clever City 2017
       / /.container
     / Bootstrap core JavaScript
     %script{:src => "vendor/jquery/jquery.min.js"}
