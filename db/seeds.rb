@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-Product.create(name: "Levi's 511", color: "blue", size: "32", price: 89.99, gender: "male", discount: 0.0, inventory: 5)
+Product.create(name: "Levi's 511", color: "blue", size: "32", price: 89.99, gender: "male", discount: 0.0, inventory: 5, group: "jeans")
