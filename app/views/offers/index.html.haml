@@ -5,38 +5,37 @@
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
-    %title Thumbnail Gallery - Start Bootstrap Template
     / Bootstrap core CSS
     %link{:href => "vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}/
     / Custom styles for this template
     %link{:href => "css/thumbnail-gallery.css", :rel => "stylesheet"}/
-  %body
+  %body.margin-body
     / Navigation
     %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
       .container
-        %a.navbar-brand{:href => "#"} Start Bootstrap
+        %a.navbar-brand{:href => "#"} Clever Jeans
         %button.navbar-toggler{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
           %span.navbar-toggler-icon
         #navbarResponsive.collapse.navbar-collapse
           %ul.navbar-nav.ml-auto
             %li.nav-item.active
               %a.nav-link{:href => "#"}
-                Home
+                Cart
                 %span.sr-only (current)
             %li.nav-item
-              %a.nav-link{:href => "#"} About
+              %a.nav-link{:href => "#"} Wish List
             %li.nav-item
-              %a.nav-link{:href => "#"} Services
-            %li.nav-item
-              %a.nav-link{:href => "#"} Contact
+              %a.nav-link{:href => "#"} Login
     / Page Content
     .container
-      %h1.my-4.text-center.text-lg-left Thumbnail Gallery
+      %h1.my-4.text-center.text-lg-left Seasonal Discounts
       .row.text-center.text-lg-left
         - @products.each do |product|
-          .col-lg-3.col-md-4.col-xs-6
-            %a.d-block.mb-4.h-100{:href => "#"}
-              %img.img-fluid.img-thumbnail{:alt => "", :src => image_url(product.image_name)}/
+          %div.col-lg-3.col-md-4.col-xs-6
+            %div.item
+              %a.d-block.mb-4.h-100{:href => "#"}
+                %span.notify-badge #{product.random_price}€ (#{product.random_discount}%)
+                %img.img-fluid.img-thumbnail{:alt => "", :src => image_url(product.image_name)}/
     / /.container
     / Footer
     %footer.py-5.bg-dark
